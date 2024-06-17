@@ -9,15 +9,15 @@ const User = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(()=>{
-        const fetchData = async ()=>{
-            try {
-                const response = await axios.get("http://localhost:8000/api/users");
-                setUsers(response.data);
-                                
-            } catch (error) {
-                console.log("Error while fetching data", error);
-            }
-        };
+      const fetchData = async ()=>{
+          try {
+              const response = await axios.get("http://localhost:8000/api/users");
+              setUsers(response.data);
+                              
+          } catch (error) {
+              console.log("Error while fetching data", error);
+          }
+      };
 
         fetchData();
     },[]);
@@ -76,10 +76,10 @@ const User = () => {
                     className="btn btn-danger" >
                     <i className="fa-solid fa-trash"></i>
                   </button>
+                  
                 </td>
               </tr>              
              );
-
           })} 
         </tbody>
       </table>
