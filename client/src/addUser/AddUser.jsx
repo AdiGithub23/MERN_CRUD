@@ -17,18 +17,24 @@ const AddUser = () => {
 
   const inputHandler = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
+    // console.log(name, ": ", value);
 
-    setUser({ ...user, [name]: value });
+    // const userCopy = { ...user }; // creates a new object with all the properties & values of the user object(previous)
+    // console.log(userCopy);
+
+    setUser({ ...user, [name]: value }); 
+    // const updatedUser = { ...user, [name]: value };
+    // console.log(updatedUser);
   };
 
   const submitForm = async (e) => {
-    e.preventDefault();
+    e.preventDefault();             // prevents from reloading the page
     await axios
       .post("http://localhost:8000/api/user", user)
       .then((response) => {
         toast.success(response.data.message, { position: "top-right" });
         navigate("/");
+        console.log(response);
       })
       .catch((error) => {
         console.log(error);

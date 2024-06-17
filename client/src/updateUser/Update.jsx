@@ -47,8 +47,8 @@ const UpdateUser = () => {
 
   return (
     <div className="addUser">
-      <Link to="/" type="button" class="btn btn-secondary">
-        <i class="fa-solid fa-backward"></i> Back
+      <Link to="/" type="button" className="btn btn-secondary">
+        <i className="fa-solid fa-backward"></i> Back
       </Link>
 
       <h3>Update User</h3>
@@ -90,7 +90,7 @@ const UpdateUser = () => {
           />
         </div>
         <div className="inputGroup">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </div>
